@@ -1,0 +1,38 @@
+CI2
+The study must contain the keywords cited in the search string section, in its abstract and/or title and/or keywords.
+CI3
+The study must be primarily related to the topics of hard-to-understand code, understandability, or readability (readability or legibility).
+CI4
+Empirical studies, such as: controlled experiment, experiment and survey. Separating surveys from experiments and more rigorous studies.
+CI5
+Studies that compare alternative programming constructs, coding expressions, coding styles, or ways to assess readability in this context.
+CI6
+Studies that present low level programming activities / limited scope programming activities. Not design, but implementation. As a rule of thumb, we're talking about intra-method code reading.
+CI7
+The study focuses on source code but not comments.
+
+
+How do we differentiate a controlled experiment from a semi-controlled experiment?
+
+
+
+
+
+
+
+
+
+How to specify that smells do not make sense for us? Hard to identify in a reliable/consistent manner? Why is it the case?
+
+
+
+CI7 is useless. Maybe it can be re-phrased to cover the case of smells. Maybe there are others.
+
+CI5, CI6. This is a paper that had the potential to be in the study, but it states things like "Improve variable name" or "Simplify if condition" without being a bit more concrete. In this sense, these comments look a lot like lower-level bad code smells. 
+(Code Readability Testing paper)
+
+Smells are a lot like that. They state that the method is long, but this is not sufficient for a developer to improve the code. More concrete information is required. Why is long identifier name relevant whereas long method seems to be a bit out of scope? For God Class, we can always argue that it is a design issue. Maybe long method is not "localized"? Or maybe a long method is not necessarily hard to read? If fits clearly within the broader activity of program comprehension but less so within code reading?
+
+However, at the same, time, we have work that shows that "longer, more descriptive" identifier names are better than "shorter, less descriptive" ones. 
+
+Same person, two approaches?
