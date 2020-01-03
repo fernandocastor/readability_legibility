@@ -147,7 +147,7 @@ The following two pertain to the same study:
 
 - **Correctness of answers, time to complete the task, personal opinion, cognitive load, and eye tracking**. For eye tracking, they specifically measured fixation duration. Cognitive load was measured by Functional near-infrared spectroscopy, more specifically, Onyx values. Measured the performance of subjects reading code with and without linguistic antipatterns. The subjects also had to locate a "semantic bug" in the code. The personal opinion in this case included task difficulty, cognitive load, and fixation duration. 
 
-
+- **Time to complete the task, correctness of answers**. The latter was graded as correct, almost correct, or wrong. Compared the use of disciplined vs. undisciplined preprocessor annotations. Participants had to perform "mental simulation", delete and modify annotated code, and fixing syntax errors in the presence of annotations. 
 
 
 response time and correctness (correct (2), almost correct (1), or wrong (0))
