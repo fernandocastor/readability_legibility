@@ -40,7 +40,7 @@ Pascal
 Pascal and C
 PL/I
 
-Not one language per paper. One of them used three, for example. One paper had to studies, both focusing on Java. Another one had a single study involving three languages. This is the reason why the numbers below do not add up tot 35. Out of the 35 papers, we have:
+Not one language per paper. One of them used three, for example. One paper had two studies, both focusing on Java. Another one had a single study involving three languages. This is the reason why the numbers below do not add up to 35. Out of the 35 papers, we have:
 
 - 18 focused on Java, one in J#. 
 - 7 on C
@@ -133,7 +133,6 @@ The following two pertain to the same study:
 
 - **Time to complete the task, correctness of answers**. Correctness in terms of both number of errors (because the program outputs multiple values) and magnitude of the error (considering that one of the outputs is an aggregate measure). Participants had to trace the execution of the program based on two different inputs. Compares positive vs. negative conditions; (ii) true/false conditions; (iii) loop styles, more specifically, process/read vs. read/process, and (iv) memory effect (whether the performance is better in the second trial).
 
-
 - **Personal opinion**. Developers were asked to judge multiple methods considering two different versions, one with developer-inserted blank lines and another one with the blank lines inserted by a tool. Evaluates the impact of developer-inserted vs. tool-inserted vertical spacing (blank lines) on readability. 
 
 - **Correctness of answers**. Students had to read one version of the program and answer 12 short-answer questions about said program. The grade in this test was the score. Compares procedure format (none, internal, external). Also looked at comments, but accounted for all treatments separately. 
@@ -142,17 +141,15 @@ The following two pertain to the same study:
 
 - **Findbugs warnings**. Priority 1 and 2 warnings. Analyzed 8 open source Java projects. Tries to define a readability index based on a number of guidelines for identifier naming and on existing metrics such as McCabe's cyclomatic complexity.  
 
-- **Personal opinion and correctness of answers**. 
+- **Personal opinion and correctness of answers**. Compares the perceptions of developers about 7 different coding idioms assumed to be used by experts vs. functionally equivalent alternatives used by novices, in addition to mixed versions combining the two kinds of idioms. The novices were asked to choose a preferred style and to guess which one was expert-style. They also had to answer 14 questions about the output of small programas (based on two or three different inputs) written in the two styles, half for each and covering all the 7 idioms. Also accounted for time, but it was limited to up to 20 minutes and the authors removed times above thre standard deviations from the mean.
+
+- **Correctness of answers**. Compares 4 styles of modularity and use or no use of comments. Students had to answer 20 questions about programs written using the 8 possible variants (4 x 2). 
+
+- **Correctness of answers, time to complete the task, personal opinion, cognitive load, and eye tracking**. For eye tracking, they specifically measured fixation duration. Cognitive load was measured by Functional near-infrared spectroscopy, more specifically, Onyx values. Measured the performance of subjects reading code with and without linguistic antipatterns. The subjects also had to locate a "semantic bug" in the code. The personal opinion in this case included task difficulty, cognitive load, and fixation duration. 
 
 
 
-Readability (based on opinions of the subjects about how readable code is), when comparing expert and novice implementations, and code comprehension (objectively measured), more specifically, whether there is a difference in comprehension when novices examine expert- vs novice-style code examples. More abstractly, the authors want to gauge whether novices who prefer a "novice style" of writing code have deep misunderstandings about the programming language. 
-The score of the participants in the 20 questions (measured on a 1-100 scale). According to the paper, "the questions were scored objectively". 
-"Time
-Success rate
-Self-reported difficult rate
-fNIRS: Oxy values
-Eye Tracker: Fixation duration"
+
 response time and correctness (correct (2), almost correct (1), or wrong (0))
 """The statistical analysis begins with an initial simple comparison of means for each variant for each of the three response variables: description ratings, confidence, and PCIS. Subsequently, mixed effects regression models are considered"". ""Second, the complete model is generated to assess the effects of four general categories of explanatory variables on the given response variable"".
 
