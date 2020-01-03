@@ -55,9 +55,9 @@ Not one language per paper. One of them used three, for example. One paper had t
 
 Lots of work on Java and C/C++. Not a single one targeting languages in the iOS ecosystem, even though the Apple store had a revenue of 26.5 billion in 2017 [1] and Swift and Objective-C are popular programming languages [2], not a single one focusing on JavaScript (or TypeScript), arguably one of the most popular programming languages [2], just one targeting Python, one of the most popular languages to teach programming [3]. More generally, the readability of the constructs of a number of programming languages that are popular has not been studied. This suggests that guides indicating better implementation approaches and preferred idioms are defined based on gut feeling and personal experience more than on empirical evidence.  
 
-[1] https://www.forbes.com/sites/chuckjones/2018/01/06/apples-app-store-generated-over-11-billion-in-revenue-for-the-company-last-year/#31ff67e06613
-[2] https://redmonk.com/sogrady/2019/07/18/language-rankings-6-19/
-[3] https://cacm.acm.org/blogs/blog-cacm/176450-python-is-now-the-most-popular-introductory-teaching-language-at-top-u-s-universities/fulltext
+- [1] https://www.forbes.com/sites/chuckjones/2018/01/06/apples-app-store-generated-over-11-billion-in-revenue-for-the-company-last-year/#31ff67e06613
+- [2] https://redmonk.com/sogrady/2019/07/18/language-rankings-6-19/
+- [3] https://cacm.acm.org/blogs/blog-cacm/176450-python-is-now-the-most-popular-introductory-teaching-language-at-top-u-s-universities/fulltext
 
 All of this is relevant because results do not transfer from one language to the other. As previous work has shown in the context of program construction (see the papers below and work by Leif Singer and colleagues), the choice of programming language does affect programmer performance even for basic programming tasks. 
 
