@@ -147,67 +147,21 @@ The following two pertain to the same study:
 
 - **Correctness of answers, time to complete the task, personal opinion, cognitive load, and eye tracking**. For eye tracking, they specifically measured fixation duration. Cognitive load was measured by Functional near-infrared spectroscopy, more specifically, Onyx values. Measured the performance of subjects reading code with and without linguistic antipatterns. The subjects also had to locate a "semantic bug" in the code. The personal opinion in this case included task difficulty, cognitive load, and fixation duration. 
 
-- **Time to complete the task, correctness of answers**. The latter was graded as correct, almost correct, or wrong. Compared the use of disciplined vs. undisciplined preprocessor annotations. Participants had to perform "mental simulation", delete and modify annotated code, and fixing syntax errors in the presence of annotations. 
+- **Time to complete the task, correctness of answers**. The latter was graded as correct, almost correct, or wrong. Compared the use of disciplined vs. undisciplined preprocessor annotations. Participants had to perform "mental simulation", delete and modify annotated code,and fixing syntax errors in the presence of annotations. 
 
+- **Correctness of answers*, personal opinion**. Correctness of two kinds of answers: freeform descriptions about the purpose of functions they had seen before, and recalling, amongst six identifiers, the ones they had seen before. The former was evaluated on a six point scale and the later as a percent correct in source (percentage of correctly identified identifiers). Personal opinion concerns how sure they were of their descriptions of the methods. It was rated on a 5 point scale. The study compare three styles of identifiers: single letters, sequences of full words, and abbreviations. Subjects were presented with 12 functions using the three styles of identifier in a balanced manner. 
 
-response time and correctness (correct (2), almost correct (1), or wrong (0))
-"""The statistical analysis begins with an initial simple comparison of means for each variant for each of the three response variables: description ratings, confidence, and PCIS. Subsequently, mixed effects regression models are considered"". ""Second, the complete model is generated to assess the effects of four general categories of explanatory variables on the given response variable"".
+- **Time to complete the task. Personal opinion**. The students were given programs representing "extremes in readability" and asked to time themselves into making a number of modifications. 1-5 grade about readability. Graded by graduate students. There was a second round of grading where the students were given checklists of program attributes thought to contribute to readability. Built a predictor (regression) based on program size, cyclomatic complexity, and "appropriate length and usage of identifiers". 
 
-About four general categories: The first category includes demographic information such as the gender, (language) comfort, and years-worked. The second category includes question characteristics, which includes code type (snippet or algorithm), lines of code, number of identifiers in the code (identifiers), and number of identifiers squared (identifiers2) – included after a graphical inspection of the data revealed a quadratic shape. The third category includes the time spent analyzing the code, writing the descriptions, and for memory, the time spent recalling identifiers. The fourth category includes answer characteristics, which, for example in the case of description rating, include the variables confidence and length of description.
+- **Personal opinion, accepted pull requests**. Accepted pull requests are a more impactful form of personal opinion because they are judged by an authority that is directly impacted by the solution under evaluation. Studies "Misunderstanding Patterns". Compared pieces of code with these patterns with alternatives where they do not exist. 
 
-About any variables:
-Description rating - is the evaluation of correctness of each response (description in free-form) on a 0 (omitted an answer or reported a problem with viewing the code) to 5 (correct) scale.
-Confidence - the subject are confidence that understanding the code in scale of 1 (low) to 5 (high).
-PCIS (percent correct in source) - the percent of correct answers for identifiers that appeared in the code (list of identifiers).
+- **Time to complete the task. Personal opinion.** Time until the subject correctly comprehends the program based on explanations and think-aloud comments. Analyzed whether names impact comprehension and what types of identifiers impact method comprehension more, parameters or local variables. Participants were supposed to explain what a method does. Used something called "dynamic treatments" and the experimenter asked questions to the participants during experiment execution. The parameter vs. local variable part used personal opinions.
 
+- **Correctness of answers, time to complete the task, number of compiler errors received by the developer, percentage of time spent without the program compiling**. Correctness pertains to whether they could complete the task successfully. Participants received part of a software system to complete. One group should use lambdas, the other one iterators. During this task, the percentage of time spent without the system compiling was one of the dependent variables. 
 
-For each variable was created models statistical (regression) types different: first a simple model and then a complete model.
+- **Activation of areas of the brain, based on correctness of answers and ability to recollect similar code**. Which areas of the brain are activated and the intensity with which activation happens. For RQ1, the measure was the contrast between the images obtained during bottom-up comprehension and detection of syntax errors (the baseline). For RQ2, they measured the "balanced contrast between the bottom-up condition and the 4 semantic-cues conditions". Participants were required to determine the outputs of short programs. In the second part, they were first trained with existing programs and then in the fMRI machine they had to determine whether snippets treated with beacons and better layout (combinations of these two factors) implemented the same functionality as snippets they had seen during training. There are clearly issues with using this evaluation approach. The experiment becomes very unnatural and its results are hard to trust. 
 
-Simple Model: ""is first constructed to gain an initial impression as to the influence of question, variant, and their interaction, hereafter denoted question*variant, on one of the three response variables: description rating, confidence, and PCIS"".
-
-Complete Model:  includes the variable variant and its interactions with the other variables. Because each model contains significant interactions, variant is always discussed in conjunction with other variables."
-"Variables:
-TOTVAR - number of different variables in the program
-LENGTH - average length of variables
-WIDTH - average number of lines between the first and last use of variable.
-VAR - average normalized length of variables.
-
-Comments:
-NCOM - number of comments
-NC - volume of comments in characters
-NBLOC - number of blocks of contiguous comments
-
-Structural Complexity:
-NSTRUCT - number of structures
-DTOT - DEPTH(S) summed over all structures S.
-DAVE - DTOT/NSTRUCT - average depth of nesting
-DMAX - maximum depth of nesting
-CYCLO - sum of program branches plus one.
-
-Software Science Parameters:
-N1 - total number of operators in a program
-N2 - total number of operands in a program
-NU2 - number of unique operators
-NU2 - number of unique operands
-N = N1+N2 - measured length of the program
-NP = NU1 log2 NU1+NU2 log2 NU2 - predicted length
-L = 2*NU2/NU1 * N2 - estimated implementation level
-V = N log2 (NU1+NU2) - volume of the program
-ERR = |(N-NP)/NP| - absolute error in predicted length
-LEVEL = L² * V - level of the language used
-EFFORT = V/L - mental effort required to understand the program.
-
-Program Length:
-NL - total number of lines in the program
-NSL - number of lines containing statements"
-"RQ2 - Grades in 5 options (totally positive, positive, neither positive or negative, negative, or totally negative)
-RQ4 - Pull request response (accepted, rejeicted)"
-Time required to correctly comprehend the program. The other dependent variable was the subjective opinion of each subject about whether parameter or local variables were more important to understand a method. 
-Four dependent variables, 1) whether a task was completed successfully, 2) Time on task to complete programming tasks, 3) the number of compiler errors received by the developer, and 4) the percentage of time developers spend with the program not compiling.
-Which areas of the brain are activated and the intensity with which activation happens. For RQ1, the measure was the contrast between the images obtained during bottom-up comprehension and detection of syntax errors (the baseline). For RQ2, they measured the "balanced contrast between the bottom-up condition and the 4 semantic-cues conditions". It is not clear to me how the non-beacon version differs from the bottom-up snippets. Maybe in the bottom-up snippets every identifier was obfuscated whereas for the non-beacon versions of the semantic cues snippets only some of the identifiers, the beacons, were obfuscated. This is suggested by Listing 2, where some of the identifiers are not obfuscated. It is important to stress that time is NOT a dependent variable. The snippets were designed to take approximately the same time to comprehend.
-Perceived understandability.
-
-
+- **Correctness of answers and personal opinion**. Perceived understandability, i.e., the participants judged whether they thought they understood the code or not. Then, three questions about the application were asked to verify whether the participants really understood the code (based on 4-choice questions). Uses regression to analyze whether combinations of a number of metrics can predict these readability results. At the end, actual understandability was a binary variable (2 or more correct responses => understood). 
 
 
 ## Stuff we did not see
