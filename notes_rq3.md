@@ -85,18 +85,34 @@ Findbugs warnings: rate per class, rate per line of code, accounting for categor
 
 Experiments vs. quasi-experiments. The atoms of confusion study fits into the latter. 
 
-Quite a few studies analyze time and also correctness. Few measure the **rate of correct answers per time unit**. This makes sense because less time might stem from code being easier to read but also due to the subject simply paying less attention. 
+Quite a few studies analyze time and also whether answers are correct. Few measure the **rate of correct answers per time unit**. This makes sense because less time might stem from code being easier to read but also due to the subject simply paying less attention. 
 
-Correct answers vs. incorrect answers. Correctness can also be measured in terms of the error based on the expected value of an aggregate measure. 
+Correct answers vs. incorrect answers. Correct ness can also be measured in terms of the error based on the expected value of an aggregate measure. 
+
++ For five of the papers, personal opinion is the only dependent variable. Previous work has shown that this is a bad idea. 
+
++ For four papers, it's only Findbugs warnings. 
+
++ Visual focus/fixation time: not saying this is not relevant, but I think future work should better analyze how this is relevant. It follows along the lines of what is mentioned above for rate of correct answers per time unit. 
+
++ How to measure correctness? What does each measurement approach actually measure? What kinds of taxonomies can we use?
+  * Recalling lines, recalling neighboring code, recalling the order of the lines
+  * Answering questions textually, often comprehensively (describing, analyzing)
+  * Answering test (multiple choice) questions. They can be stated as questions, but also as sentences about the program (with the implicit question: true or false?) (analyzing)
+  * Tracing and Predicting outputs (explaining, analyzing)
+  * Performing an intervention (bug fixing, implementation of a new functionality) and evaluating whether it meets the specification. 
+
+  * Orthogonally, what aspect does the evaluation tackle: outputs, executed instructions (and control flow), state, general intention of the a program
+  * Orthogonally: accounting for difficulty. 
 
 
-- **Number of lines of code that were recalled correctly and in the correct order**. The subjects had 4 minutes to recall programs they had just spent 3 minutes studying.  Compare simple vs. complex control flow and the use (or not) of paragrahing in the source code. 
+- **Correctness of answers.**. More specificially, they measured the number of lines of code that were recalled correctly and in the correct order. The subjects had 4 minutes to recall programs they had just spent 3 minutes studying.  Compare simple vs. complex control flow and the use (or not) of paragrahing in the source code. 
 
-- **Fully correct answers to a test**. The questions were placed in five categories based on difficulty (where the easiest category had the most fully correct answers). The questions either involved explaining the purpose of a code snippet or tracing the execution of a program, i.e., how its state change as each instruction was executed. Compares metrics: Number of statements, Number of operands (including all identifiers that are not key words), Cyclomatic complexity, Average nested block depth, Average number of parameters, Number of methods (for EiPE questions only). Two *dynamic metrics*: Sum of all operands in the executed statements, Number of executed program statements. **Very interesting**. We read code in an attempt to understand what it will do at runtime, but most work on metrics focuses on **static metrics**, not dynamic ones. 
+- **Correctness of answers**. Only fully correct answers to a test were accounted for. The questions were placed in five categories based on difficulty (where the easiest category had the most fully correct answers). The questions either involved explaining the purpose of a code snippet or tracing the execution of a program, i.e., how its state change as each instruction was executed. Compares metrics: Number of statements, Number of operands (including all identifiers that are not key words), Cyclomatic complexity, Average nested block depth, Average number of parameters, Number of methods (for EiPE questions only). Two *dynamic metrics*: Sum of all operands in the executed statements, Number of executed program statements. **Very interesting**. We read code in an attempt to understand what it will do at runtime, but most work on metrics focuses on **static metrics**, not dynamic ones. These are independent variables, however.
 
-- **Time to answer the questions, correctness of the answers, visual effort**, measured "indirectly using observable variables related to fixations", such as pupil dilations, time spent looking at specific sections of code, and examined area of the code. This study compared regular vs. non-regular code snippets.  
+- **Time to complete the task, correctness of answers, visual effort**, measured "indirectly using observable variables related to fixations", such as pupil dilations, time spent looking at specific sections of code, and examined area of the code. This study compared regular vs. non-regular code snippets.  
 
-- **Task completion time, correctness of the answers**. The participants had to study 2 out of four small J# programs and later were presented with 3-option sheets where they had to pick the one that best described (they were not really questions) the function of the application. Each sheet was only presented after the previous one was complete. Naming style again.
+- **Time to complete the task, correctness of answers**. The participants had to study 2 out of four small J# programs and later were presented with 3-option sheets where they had to pick the one that best described (they were not really questions) the function of the application. Each sheet was only presented after the previous one was complete. Naming style again.
 
 - **Findbugs warnings**. In this case study, 8 open-source Java systems were analyzed to check conformance of their identifiers against 10 identifier style guidelines (collected by the authors). Implicit assumption: identifier naming impacts readability. # of classes with flawed/not flawed identifier names vs. # of classes with Findbugs warnings.
 
@@ -109,7 +125,7 @@ The following two pertain to the same study:
 
 - **Correctness of answers**. Different types of true/false questions pertaining to "operations", "control flow", "state", "function". Nonsensical vs. meaningful identifier names. Also places subjects into three groups based on their experience. 
 
-- **Correctness of answers, personal opinion about difficulty, eye tracking, time to complete the task**. Correctness: exact, partial, wrong. Personal opinion about difficulty in terms of rate and rank. Eye tracking: fixations (duration and rate) and saccades (amplitude). Measured four different levels of indentation (0,2,4,8).
+- **Correctness of answers, personal opinion, eye tracking, time to complete the task**. Correctness: exact, partial, wrong. Personal opinion about difficulty in terms of rate and rank. Eye tracking: fixations (duration and rate) and saccades (amplitude). Measured four different levels of indentation (0,2,4,8). Personal opinion about difficulty.
 
 - **Findbugs warnings**. Number of warnings per KLoC. Also examined the 8 different types of warnings (for RQ2). Case study targeting 14 open source projects. Measured WCMR, a measure of the quality of variable names aiming to account for concreteness and retention. 
 
@@ -123,7 +139,7 @@ The following two pertain to the same study:
 
 - **Correctness of answers, personal opinion, time to determine whether they understood or not**. Each subject studied 8 methods extracted from a group of 50 . They had to study the methods. For each method, participants were asked to first answer whether they understood the method or not (personal opinion). If they stated that they did understand, they were then asked three verification questions about the method (correctness). Measures a number of different metrics to assess whether any of them is a good predictor for "code understandability". Time was measured only until the subject clicked that shee understood the code or not. Also assigned a binary judgement to subject understanding (if 2 of the 3 verification questions were answered correctly) and compared that with whether they believe they understand the code or not .  
 
-- **One-line summary of the program, percentage of recalled lines, percentage of recalled lines following one presented by the experiments and order of the lines**. Experiments aiming to verify the existence of beacons. Participants studied printed copies of a short program. Asked to understand it and memorize it. Then asked to summarize and recall. Second experiment: copy of a program, subjects were given 7 cards with one line of code each. Asked to write the following two lines. 
+- **One-line summary of the program, correctness of answers.** Correctness was measured in terms of percentage of recalled lines, percentage of recalled lines following one presented by the experiments and order of the lines. Experiments aiming to verify the existence of beacons. Participants studied printed copies of a short program. Asked to understand it and memorize it. Then asked to summarize and recall. Second experiment: copy of a program, subjects were given 7 cards with one line of code each. Asked to write the following two lines. 
 
 - **Time to complete the task, visual focus**. How long developers inspected the code to find a defect. Time spent looking at different parts of the code and the direction of reading of the subjects. Participants were asked to find a defect in a code snippet, which was repeated four times. Two snippets had semantic defects and two had syntactic defects. In our study we compared short, mostly single-word identifier names (“short” condition) with longer compound identifier names. Used the type of defect as a control. 
  
